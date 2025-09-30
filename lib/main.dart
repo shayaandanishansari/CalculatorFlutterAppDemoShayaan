@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: CalculatorWidget(),
     );
   }
@@ -77,30 +78,34 @@ class CalculatorWidgetState extends State<CalculatorWidget>{
     return Scaffold(
       body: Column(
         children: [
-          // Top Display
-          Container(
-            height: 80,
-            width: double.infinity,
-            margin: EdgeInsets.all(16),
-            padding: EdgeInsets.all(16),
-            alignment: Alignment.centerRight,
-            decoration: BoxDecoration(
-                color: Color.fromARGB( 255, 20, 207, 176),
-                borderRadius: BorderRadius.circular(10)
-            ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              reverse: true,
-              child: Text(
-                displayText,
-                style: TextStyle(
-                  fontSize: 24,
-
-                ),
+          // Top Box
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(16),
+              padding: EdgeInsets.all(2),
+              alignment: Alignment.centerRight,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB( 255, 20, 207, 176),
+                  borderRadius: BorderRadius.circular(10)
+              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                reverse: true, //Newest text appears on the right, the only thing I didn't understand
+                child: Text(
+                    displayText,
+                    style: TextStyle(
+                      fontSize: 80,
+                    ),
+                  ),
               ),
             ),
           ),
+
+          //Bottom Box
           Expanded(
+              flex: 4,
               child: Container(
                 margin: EdgeInsets.only(bottom: 16, left: 16, right: 16),
                 padding: EdgeInsets.all(16),
