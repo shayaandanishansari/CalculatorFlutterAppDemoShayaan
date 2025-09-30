@@ -1,16 +1,19 @@
-# calculator
+# Calculator App (Flutter)
 
-A new Flutter project.
+A simple Flutter calculator app built for practice with Flutter layouts, state management, and GitHub Pages deployment.  
+This project was made as a learning exercise and also deployed as a live demo using GitHub Pages.
 
-## Getting Started
+## Features
+- Responsive 4x4 calculator layout
+- Basic operations: addition, subtraction, multiplication, division
+- Clear (`C`) button
+- Equals (`=`) button with expression evaluation using `math_expressions`
+- Display box with scroll support for long expressions
+- Responsive UI with `Expanded` and flex ratios (1/5 top display, 4/5 keypad)
+- Deployed to GitHub Pages with Flutter web + peanut
 
-This project is a starting point for a Flutter application.
+## Screenshot
+![img.png](img.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Live Demo
+[Calculator on GitHub Pages](https://shayaandanishansari.github.io/CalculatorFlutterAppDemoShayaan/)
